@@ -8,6 +8,11 @@
 }
 
 :root{
+  /* --vanity-color: #d5f2a9; */
+
+  --sidebar-background-color: var(--vanity-color, #ccc);
+  --decorator-color: var(--vanity-color, #f2f2f2);
+
   --page-width: 8.5in;
   --page-height: 11in;
   --main-width: 6.4in;
@@ -16,12 +21,13 @@
 
   --sidebar-horizontal-padding: 0.2in;
 
+
   /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 10px;
   --decorator-outer-offset-left: -5px;
   --decorator-border-width: 1px;
   --decorator-outer-dim: 9px;
-  --decorator-border: 1px solid #ccc;
+  --decorator-border: 1px solid var(--decorator-color);
 
   --row-blocks-padding-top: 5pt;
   --date-block-width: 0.6in;
@@ -62,7 +68,7 @@ li{
   width: var(--sidebar-width);
   height: 100%;
   padding: 0.6in var(--sidebar-horizontal-padding);
-  background-color: #f2f2f2;
+  background-color: var(--sidebar-background-color);
   font-size: 8.5pt;
 }
 
